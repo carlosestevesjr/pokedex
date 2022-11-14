@@ -11,7 +11,7 @@ const Rota = () => {
             <BrowserRouter basename="pokedex">
                 <Routes>
                     <Route path="/" element={<Home/>} />
-                    <Route path="sobre/" element={<About/>} />
+                    <Route path="sobre/" element={<About />} />
                     <Route path='*' element={<Home />} />
                 </Routes>
             </BrowserRouter>

@@ -8,6 +8,7 @@ import { useAplication } from "../provider/aplication";
 
 import { HomeWrapper } from '../styles/globals';
 import Loader from '../components/Utilities/Loader';
+import React from 'react';
 
 const Home = () => {
 
@@ -101,8 +102,6 @@ const Home = () => {
                 {
                     pokemons?.map((data, i) => (
                         <PokemonList
-                        
-                        indice={i}
                         key={i}
                         {...data}
                         />
