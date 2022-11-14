@@ -2,18 +2,14 @@
   "name": "@ce/pokedex",
   "scripts": {
     "start": "webpack serve",
-    "start:standalone": "webpack serve --env standalone",
-    "build": "concurrently npm:build:*",
-    "build:webpack": "webpack --mode=production",
-    "analyze": "webpack --mode=production --env analyze",
     "lint": "eslint src --ext js,ts,tsx",
+    "test": "cross-env BABEL_ENV=test jest",
     "format": "prettier --write .",
     "check-format": "prettier --check .",
-    "test": "cross-env BABEL_ENV=test jest",
-    "watch-tests": "cross-env BABEL_ENV=test jest --watch",
     "prepare": "husky install",
-    "coverage": "cross-env BABEL_ENV=test jest --coverage",
-    "build:types": "tsc"
+    "start:standalone": "webpack serve --env standalone",
+    "build": "concurrently npm:build:*",
+    "build:webpack": "webpack --mode=production"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
